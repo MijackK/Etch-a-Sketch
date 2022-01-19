@@ -1,7 +1,31 @@
+:root{
+    --giwidth:30px;
+    --giheight:30px;
+    --sketch:480.21px;
+
+}
+
 h1{
     text-align: center;
+    color:black;
 }
 .flex-box{
     display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+.sketch-box{
+    display: flex;
+    flex-wrap: wrap;
+    width:var(--sketch);
+    height:var(--sketch) ;
+    border-style: solid;
+    overflow: hidden;
+     
+}
 
+.grid-item{
+    padding: 0px;
+    margin: 0px;
+    border-width: 0px;
 }

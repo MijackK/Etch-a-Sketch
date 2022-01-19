@@ -3,11 +3,20 @@
     <head>
         <title>Etch A Sketch</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
+        <meta charset="UTF-8">
 
     </head>
     <body>
         <h1>Etch a Sketch</h1>
-
+        <input type="color" id="color-picker">
+        <button id="rgb">RGB Mode</button>
+        <button id="opacity">Opacity Mode</button>
+      
+        <div class="flex-box" > 
+            <div class="sketch-box" id="grid-box"></div>
+        </div>
+        <input type="range" min="16" max="100" id="density" >
+        <button id="clear">Clear</button>
     </body>
 </html>

@@ -35,6 +35,10 @@ h1{
 input{
     cursor: pointer;
 }
+input[type=color]{
+    width:100px; 
+    height: 38px;
+}
 
 .slider{
     margin:10px;

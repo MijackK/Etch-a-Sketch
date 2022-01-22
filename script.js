@@ -6,6 +6,8 @@ let colorPicker= document.querySelector('#color-picker');
 let rgbMode= document.querySelector('#rgb');
 let clearBtn=document.querySelector('#clear');
 let pixelSlider= document.querySelector('#density');
+let resolution = document.querySelector('#resolution');
+
 
 
 colorPicker.addEventListener('change',(e)=>{
@@ -17,10 +19,10 @@ let oMode=document.querySelector('#opacity');
 rgbMode.addEventListener('click',()=> colorMode=RainbowMode);
 oMode.addEventListener('click',()=> {
     colorMode=opacityMode;
-    color='black';
+    color='rgba(0,0,0,0.1)';
 });
 let items = Number(pixelSlider.value)**2;
-let dimension = 480/Number(pixelSlider.value);
+let dimension = 500/Number(pixelSlider.value);
 let color= 'black';
 let randomNumber = () => Math.floor(Math.random()*255);
 let defaultMode = (e) =>{ 
@@ -32,14 +34,12 @@ let RainbowMode = (e) =>{
     e.target.style.background=`rgb(${randomNumber()},${randomNumber()},${randomNumber()})`;
 }
 let opacityMode = (e) =>{
-    e.target.style.background=color;
-    let opacity = Number(e.target.style.opacity)
-
-    if(e.target.style.opacity == ""){
-        e.target.style.opacity=0.1;
+    if(e.target.style.background.match(/0.9/)){
+        return
     }
-    else if(opacity < 1){ 
-        e.target.style.opacity = opacity + 0.1
+    opacity = e.target.style.background.match( /0.[0-9]/)
+     if(Number(opacity) <= 0.8){ 
+        e.target.style.background = `rgba(0,0,0,${Number(opacity)+0.1})`;  
     }
 }
 
@@ -62,11 +62,8 @@ let remakeSketchPad = (boxSize) => {
         childrenNum--;
     }
     items =boxSize**2;
-    dimension=(480/boxSize).toFixed(3);
+    dimension=(500/boxSize).toFixed(3);
     createSketchPad();
-    console.log(dimension);
-  
-
 }
 
 const clearSketchPad = () =>{
@@ -74,6 +71,9 @@ const clearSketchPad = () =>{
     div.forEach(element => element.style.background='white')
 }
 clearBtn.addEventListener('click',clearSketchPad)
-pixelSlider.addEventListener('change',(e) => remakeSketchPad(Number(e.target.value)))
+pixelSlider.addEventListener('change',(e) => {
+    remakeSketchPad(Number(e.target.value));
+    resolution.innerText= `${e.target.value} x ${e.target.value}`
+})
 
 createSketchPad();

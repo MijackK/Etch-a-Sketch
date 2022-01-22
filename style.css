@@ -1,8 +1,7 @@
 :root{
     --giwidth:30px;
     --giheight:30px;
-    --sketch:480.21px;
-
+    --sketch:500.21px;
 }
 
 h1{
@@ -11,8 +10,12 @@ h1{
 }
 .flex-box{
     display: flex;
-    justify-content: center;
     height: fit-content;
+    justify-content: center;
+}
+.flex-box > button{
+    margin-left:5px;
+    margin-right: 5px;
 }
 .sketch-box{
     display: flex;
@@ -28,4 +31,50 @@ h1{
     padding: 0px;
     margin: 0px;
     border-width: 0px;
+}
+input{
+    cursor: pointer;
+}
+
+.slider{
+    margin:10px;
+    background: grey;
+    width:300px;
+
+}
+.slider:hover {
+    opacity: 1;
+  
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #000503;
+    cursor: pointer;
+  }
+img{
+    max-height:100px;
+    padding:5px;
+    max-width: 100%;
+}
+button{
+    width: 200px;
+    height: fit-content;
+    border-style: solid;
+    cursor: pointer;
+    
+}
+#clear{
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    border-radius: 10px;
+
+}
+span{
+    color: gray;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top:5px;
 }

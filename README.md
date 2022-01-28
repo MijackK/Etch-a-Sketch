@@ -1,4 +1,4 @@
-
+![](https://github.com/MijackK/Etch-a-Sketch/blob/main/art2.PNG)
 
 <h1> Etch a Sketch </h1>
 <h1 >Live : https://etchsketchdraw.netlify.app/ </h1>
@@ -9,5 +9,6 @@
   <li> Random RGB Mode :rainbow: </li>
   <li> Opacity Mode </li>
 </ul>
-![](https://github.com/MijackK/Etch-a-Sketch/blob/main/art2.PNG)
+
+
 

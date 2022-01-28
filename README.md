@@ -7,4 +7,4 @@
   <li> Random RGB Mode :rainbow: </li>
   <li> Opacity Mode </li>
 <ul>
-![alt text](pixel art 1.PNG "Title")
+![alt text](https://github.com/MijackK/Etch-a-Sketch/blob/main/pixel art 1.PNG "Title")

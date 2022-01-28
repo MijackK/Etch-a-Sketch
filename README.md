@@ -7,3 +7,4 @@
   <li> Random RGB Mode :rainbow: </li>
   <li> Opacity Mode </li>
 <ul>
+![alt text](pixel art 1.PNG "Title")

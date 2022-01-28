@@ -52,6 +52,7 @@ const createSketchPad = () => {
         gridBox.appendChild(gridItem.cloneNode(true));
         document.querySelector('#grid'+i).addEventListener('mouseover',
         (e) => colorMode(e));
+
     }
 };
 let remakeSketchPad = (boxSize) => {

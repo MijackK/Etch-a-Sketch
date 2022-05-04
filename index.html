@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <script src="script.js" defer></script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Etch a sketch</title>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Etch a sketch</title>
+  </head>
+  <body>
+    <div class="flex-box" style="margin-bottom: 50px">
+      <img src="img/Title.png" />
+    </div>
+    <div
+      class="flex-box"
+      style="margin-bottom: 10px; align-items: flex-start"
+    ></div>
 
-    </head>
-    <body>
-        <div class="flex-box"  style="margin-bottom: 50px;">
-        <img src="img/Title.png">
-    </div>
-        <div class="flex-box" style="margin-bottom: 10px; align-items: flex-start;" >
-        <input type="color" id="color-picker">
-        <button id="rgb"><img src="img/RGB.png"></button>
-        <button id="opacity"><img src="img/OPACITY.png"></button>
+    <div class="sketch-container">
+      <div class="tools">
+        <input type="color" id="color-picker" />
+        <button id="rgb"><img src="img/RGB.png" /></button>
+        <button id="opacity"><img src="img/OPACITY.png" /></button>
+        <div
+          class="flex-box"
+          style="flex-direction: column; align-items: center"
+        >
+          <span id="resolution"> 16 x 16</span>
+          <input
+            type="range"
+            min="16"
+            max="100"
+            value="16"
+            id="density"
+            class="slider"
+          />
+          <button id="clear"><img src="img/CLEAR.png" /></button>
         </div>
-      
-        <div class="flex-box" > 
-            <div class="sketch-box" id="grid-box"></div>
-        </div>
-        <div class="flex-box" style="flex-direction: column; align-items: center;">
-            <span id='resolution'> 16 x 16</span>
-        <input type="range" min="16" max="100" value="16" id="density" class="slider">
-        <button id="clear"><img src="img/CLEAR.png"></button>
+      </div>
+      <div class="sketch-box" id="grid-box"></div>
     </div>
+
     <footer>
-        Made by<a href="https://github.com/MijackK/Etch-a-Sketch" target="_blank"> <i class="fab fa-github"></i></a>
+      Made by<a href="https://github.com/MijackK/Etch-a-Sketch" target="_blank">
+        <i class="fab fa-github"></i
+      ></a>
     </footer>
-    </body>
+  </body>
 </html>

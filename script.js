@@ -49,7 +49,7 @@ const createSketchPad = () => {
     gridItem.setAttribute("id", "grid" + i);
     gridBox.appendChild(gridItem.cloneNode(true));
     document.querySelector("#grid" + i).addEventListener("mouseover", (e) => {
-      // if (draw === false) return;
+      if (draw === false) return;
       colorMode(e);
     });
   }
@@ -74,12 +74,12 @@ pixelSlider.addEventListener("change", (e) => {
   remakeSketchPad(Number(e.target.value));
   resolution.innerText = `${e.target.value} x ${e.target.value}`;
 });
-/** 
+
 gridBox.addEventListener("mousedown", () => {
   draw = true;
 });
 gridBox.addEventListener("mouseup", () => {
   draw = false;
 });
-*/
+
 createSketchPad();

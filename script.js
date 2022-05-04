@@ -48,7 +48,7 @@ const createSketchPad = () => {
   for (let i = 0; i < items ** 2; i++) {
     gridItem.setAttribute("id", "grid" + i);
     gridBox.appendChild(gridItem.cloneNode(true));
-    document.querySelector("#grid" + i).addEventListener("mouseover", (e) => {
+    document.querySelector("#grid" + i).addEventListener("mousemove", (e) => {
       if (draw === false) return;
       colorMode(e);
     });

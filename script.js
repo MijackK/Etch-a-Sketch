@@ -45,6 +45,7 @@ let colorMode = defaultMode;
 
 const createSketchPad = () => {
   gridBox.style.gridTemplate = `repeat(${items},1fr)/repeat(${items},1fr)`;
+
   for (let i = 0; i < items ** 2; i++) {
     gridItem.setAttribute("id", "grid" + i);
     gridBox.appendChild(gridItem.cloneNode(true));
@@ -75,7 +76,8 @@ pixelSlider.addEventListener("change", (e) => {
   resolution.innerText = `${e.target.value} x ${e.target.value}`;
 });
 
-gridBox.addEventListener("mousedown", () => {
+gridBox.addEventListener("mousedown", (e) => {
+  e.preventDefault();
   draw = true;
 });
 gridBox.addEventListener("mouseup", () => {

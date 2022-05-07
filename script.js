@@ -79,6 +79,7 @@ pixelSlider.addEventListener("change", (e) => {
 gridBox.addEventListener("mousedown", (e) => {
   e.preventDefault();
   draw = true;
+  colorMode(e);
 });
 gridBox.addEventListener("mouseup", () => {
   draw = false;

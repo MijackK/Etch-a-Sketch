@@ -17,7 +17,7 @@ colorPicker.addEventListener("click", (e) => {
   color = e.target.value;
   colorMode = defaultMode;
 });
-let oMode = document.querySelector("#opacity");
+let oMode = document.querySelector("#shading");
 
 rgbMode.addEventListener("click", () => (colorMode = RainbowMode));
 oMode.addEventListener("click", () => {

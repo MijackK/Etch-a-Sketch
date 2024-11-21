@@ -6,7 +6,7 @@
 <ul>
   <li>Pick a Color Mode :pencil2: </li>
   <li> Random RGB Mode :rainbow: </li>
-  <li> Opacity Mode </li>
+  <li> Shading Mode </li>
 </ul>
 <h2> Screenshots </h2>
 
